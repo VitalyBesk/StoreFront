@@ -11,24 +11,28 @@ describe("<BaseCounter/>", () => {
   const increment = () => (count += 1);
   const decrement = () => (count -= 1);
 
+  const mockFnIncrement = jest.fn(increment);
+  const mockFnDecrement = jest.fn(decrement);
+
   const wrapper = mount(
     <BaseCounter
-      handleClickIncrement={increment}
-      handleClickDecrement={decrement}
+      handleClickIncrement={mockFnIncrement}
+      handleClickDecrement={mockFnDecrement}
       value={count}
     />
   );
 
   it("Checking the type of props", () => {
     expect(typeof wrapper.props().value).toBe("number");
-    expect(wrapper.props().handleClickIncrement).toBeInstanceOf(Function);
-    expect(wrapper.props().handleClickIncrement).toBeInstanceOf(Function);
+    expect(typeof wrapper.props().handleClickIncrement).toBe("function");
+    expect(typeof wrapper.props().handleClickIncrement).toBe("function");
   });
 
   it("it should increment count when button +(plus) clicked", () => {
     expect(count).toBe(0);
     expect(wrapper.props().value).toBe(0);
     wrapper.props().handleClickIncrement();
+    expect(mockFnIncrement).toHaveBeenCalled();
     wrapper.setProps({ value: count });
     expect(count).toBe(1);
     expect(wrapper.props().value).toBe(1);
@@ -39,6 +43,7 @@ describe("<BaseCounter/>", () => {
     expect(count).toBe(1);
     expect(wrapper.props().value).toBe(1);
     wrapper.props().handleClickDecrement();
+    expect(mockFnDecrement).toHaveBeenCalled();
     wrapper.setProps({ value: count });
     expect(count).toBe(0);
     expect(wrapper.props().value).toBe(0);
