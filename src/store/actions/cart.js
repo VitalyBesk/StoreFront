@@ -5,7 +5,7 @@ const addProduct = product => {
   };
 };
 
-const incrementProduct = (uuid, count: 0) => {
+const incrementProduct = (uuid, count = 0) => {
   return {
     type: "INCREMENT_PRODUCT",
     uuid,

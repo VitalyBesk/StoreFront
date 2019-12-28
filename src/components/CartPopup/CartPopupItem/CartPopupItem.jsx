@@ -27,7 +27,7 @@ function CartPopupItem({ product = {} }) {
         <div className="cart-popup-product__price">${product.price}</div>
       </div>
       <div className="col-xs-2">
-        <BaseButton type="icon" size="md" handleClick={handleRemoveFromCart}>
+        <BaseButton type="icon" handleClick={handleRemoveFromCart}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
             <path
               fill="var(--gray-color)"

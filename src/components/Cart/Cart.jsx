@@ -42,7 +42,7 @@ function Cart({ isEmptyCart = true, totalPriceToFixed = "0" }) {
                   <Link to="/" className="link link-primary">
                     Continue Shopping
                   </Link>
-                  <BaseButton disabled size="lg">
+                  <BaseButton size="lg">
                     Checkout (${totalPriceToFixed})
                   </BaseButton>
                 </div>
