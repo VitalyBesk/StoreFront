@@ -13,19 +13,19 @@ function Product() {
   const dispatch = useDispatch();
   const productList = useSelector(state => state.productReducers.productList);
   const productCart = useSelector(state => state.cartReducers.productCart);
-  const [product, setProduct] = useState({});
+
+  let productIndex = productList.findIndex(el => el.title === title);
+  let productValue = productIndex !== -1 ? productList[productIndex] : {};
+  const [product] = useState(productValue);
+
   const [count, setCount] = useState(0);
   const [isProductInCart, setIsProductInCart] = useState(false);
 
   useEffect(() => {
-    let productIndex = productList.findIndex(el => el.title === title);
-
-    if (productIndex !== -1) {
-      setProduct(productList[productIndex]);
-    } else {
+    if (productIndex === -1) {
       history.push("/");
     }
-  }, [productList, title, history]);
+  }, [history, productIndex]);
 
   useEffect(() => {
     let productInCartIndex = productCart.findIndex(
