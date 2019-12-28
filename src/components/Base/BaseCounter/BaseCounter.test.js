@@ -22,10 +22,10 @@ describe("<BaseCounter/>", () => {
     />
   );
 
-  it("Checking the type of props", () => {
+  it("checking the type of props", () => {
     expect(typeof wrapper.props().value).toBe("number");
     expect(typeof wrapper.props().handleClickIncrement).toBe("function");
-    expect(typeof wrapper.props().handleClickIncrement).toBe("function");
+    expect(typeof wrapper.props().handleClickDecrement).toBe("function");
   });
 
   it("it should increment count when button +(plus) clicked", () => {
