@@ -1,0 +1,38 @@
+.cart-popup-product {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__img {
+    height: 3rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+
+    span {
+      font-weight: normal;
+      font-size: 0.675rem;
+      display: inline-block;
+    }
+  }
+
+  &__brand {
+    color: var(--gray-color);
+    letter-spacing: 0.5px;
+    font-size: 0.675rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+}

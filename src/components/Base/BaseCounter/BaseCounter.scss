@@ -1,0 +1,32 @@
+.base-counter {
+  margin: 0.5rem;
+  height: 3.25rem;
+  width: 4.875rem;
+
+  &__value {
+    background: var(--light-gray-color-3);
+    width: 3.25rem;
+    height: 100%;
+    color: var(--black-color);
+  }
+
+  &__btn {
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray-color-2);
+    color: var(--black-color);
+    border: none;
+    width: 1.4375rem;
+    height: 1.4375rem;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: var(--gray-color);
+    }
+  }
+}

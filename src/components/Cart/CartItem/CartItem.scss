@@ -1,0 +1,41 @@
+.cart-product {
+  padding-top: 1rem;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--light-gray-color-2);
+    opacity: 0.25;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  &__img {
+    height: 4.625rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__brand {
+    color: var(--gray-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__price {
+    color: var(--gray-color);
+  }
+
+  .base-counter {
+    margin: 0;
+  }
+}

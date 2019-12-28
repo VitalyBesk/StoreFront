@@ -1,0 +1,28 @@
+.cart-overview {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--light-gray-color-2);
+    opacity: 0.25;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  &__row {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--gray-color);
+    margin-bottom: 1rem;
+  }
+
+  &__price {
+    color: var(--black-color);
+  }
+}

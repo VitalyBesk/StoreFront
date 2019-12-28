@@ -1,0 +1,57 @@
+.category {
+  &-product {
+    cursor: pointer;
+
+    &__img {
+      &-wrap {
+        height: 20vh;
+        min-height: 10rem;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-btns {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: opacity 0.3s ease;
+
+        .category-product:hover & {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__brand {
+      color: var(--gray-color);
+      font-size: 0.75rem;
+      padding-top: 0.5rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &__title {
+      padding: 0.5rem 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &__price {
+      color: var(--gray-color);
+      font-size: 0.875rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

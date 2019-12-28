@@ -1,0 +1,82 @@
+@import-normalize;
+@import "~flexboxgrid";
+@import "variables";
+@import "fonts";
+@import "header";
+@import "link";
+@import "utilities";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-size: $base-font-size;
+}
+
+.container {
+  max-width: calc(100% - 1rem);
+}
+
+.container-fluid {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: calc(100% - 1rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.h-inherit {
+  height: inherit;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+@media screen and (min-width: 80em) {
+  .container {
+    width: 69rem;
+  }
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

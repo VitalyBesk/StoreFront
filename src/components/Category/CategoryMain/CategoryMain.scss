@@ -1,0 +1,54 @@
+.category {
+  &-main {
+    background: url("/media/plates-header.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 30vh;
+
+    &__intro {
+      background: var(--black-color);
+      color: var(--color-white);
+      padding: 1.5rem;
+      position: relative;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1rem;
+        background: var(--color-white);
+        content: "";
+      }
+
+      &:after {
+        left: -1rem;
+      }
+      &:before {
+        right: -1rem;
+      }
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      margin: 0;
+
+      span {
+        display: inline-block;
+
+        &:after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: var(--color-white);
+          display: block;
+          margin: 0.5rem auto 0.5rem;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 0.875rem;
+      margin: 0.5rem 0;
+    }
+  }
+}

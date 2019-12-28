@@ -1,0 +1,30 @@
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black-color);
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+
+  &-primary {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--black-color);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}

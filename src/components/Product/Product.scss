@@ -1,0 +1,48 @@
+.product {
+  &__brand {
+    margin: 1rem 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+  }
+
+  &__price {
+    color: var(--gray-color);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  &__descr {
+    color: var(--gray-color);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray-color-2);
+    margin-bottom: 1rem;
+  }
+
+  &__breadcrumbs {
+    height: 3.75rem;
+    margin-bottom: 1rem;
+
+    .link {
+      &:not(:last-child) {
+        margin-right: 1rem;
+
+        &:after {
+          content: "/";
+          display: inline-block;
+          color: inherit;
+          font-size: inherit;
+          position: absolute;
+          right: -0.5rem;
+        }
+      }
+
+      &:last-child {
+        color: var(--light-gray-color-2);
+        pointer-events: none;
+      }
+    }
+  }
+}

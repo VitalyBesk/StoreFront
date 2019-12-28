@@ -1,0 +1,92 @@
+.base-button {
+  font-size: 0.875rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid transparent;
+  margin: 0.5rem;
+  outline: none;
+  padding: 0;
+
+  &.lg {
+    &:not(.icon) {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+
+      @media screen and (max-width: 767px) {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &.md {
+    &:not(.icon) {
+      padding: 0.5rem 1.5rem;
+
+      @media screen and (max-width: 767px) {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+  }
+
+  &.primary {
+    background: var(--black-color);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: var(--gray-color);
+    }
+
+    &:disabled {
+      background: var(--light-gray-color-2);
+    }
+  }
+
+  &.secondary {
+    background: var(--color-white);
+    border-color: var(--black-color);
+    transition: background 0.3s ease, color 0.3s ease;
+    color: var(--black-color);
+
+    &:hover {
+      background: var(--black-color);
+      color: var(--color-white);
+      border-color: transparent;
+    }
+  }
+
+  &.icon {
+    &.md {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &.lg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    svg {
+      width: 100%;
+
+      path {
+        transition: fill 0.3s ease;
+      }
+
+      &:hover {
+        path {
+          fill: var(--black-color);
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
