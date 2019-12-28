@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BaseCounter/> snapshot render 1`] = `
+<div
+  className="base-counter d-flex between-xs center-xs"
+>
+  <div
+    className="base-counter__value d-flex  center-xs middle-xs"
+  >
+    0
+  </div>
+  <div
+    className="d-flex flex-column between-xs"
+  >
+    <button
+      className="base-counter__btn"
+      onClick={[MockFunction]}
+    >
+      +
+    </button>
+    <button
+      className="base-counter__btn"
+      disabled={true}
+      onClick={[MockFunction]}
+    >
+      -
+    </button>
+  </div>
+</div>
+`;

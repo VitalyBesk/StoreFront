@@ -1,5 +1,6 @@
 import React from "react";
 import BaseCounter from "./BaseCounter";
+import renderer from "react-test-renderer";
 import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -21,6 +22,18 @@ describe("<BaseCounter/>", () => {
       value={count}
     />
   );
+
+  it("snapshot render", () => {
+    const component = renderer.create(
+      <BaseCounter
+        handleClickIncrement={mockFnIncrement}
+        handleClickDecrement={mockFnDecrement}
+        value={count}
+      />
+    );
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
   it("checking the type of props", () => {
     expect(typeof wrapper.props().value).toBe("number");
