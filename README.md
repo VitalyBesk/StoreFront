@@ -48,10 +48,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### What improved:
 
-- in my opinion, when the user is on the product page if in the counter the quantity of product is greater than the already added quantity, then when you click on the "Add to Cart" button, the quantity should increase by the amount indicated in the counter. Otherwise, it should only increment.
+- in my opinion, when the user is on the product page and if in the counter the quantity of product is greater than the already added quantity, then when you click on the "Add to Cart" button, the quantity should increase by the amount indicated in the counter. Otherwise, it should only increment.
 - added a state when the cart is empty
 - added disabled state of buttons
 
 ### Testing:
 
-- I chose BaseCounter as component for testing. It is reused in some parts of the application and in my opinion it is a suitable component for testing for testing. For testing used Jest and Enzyme. Just type `yarn test` or `npm run test` in CLI to run the test.
+- I chose BaseCounter as component for testing. It is reused in some parts of the application and in my opinion it is a suitable component for testing. For testing used Jest and Enzyme. Just type `yarn test` or `npm run test` in CLI to run the test.
