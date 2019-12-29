@@ -48,7 +48,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### What improved:
 
-- in my opinion, when the user is on the product page and if in the counter the quantity of product is greater than the already added quantity, then when you click on the "Add to Cart" button, the quantity should increase by the amount indicated in the counter. Otherwise, it should only increment.
+- in my opinion, when the user is on the product page and if in the counter the quantity of product is greater than the already added quantity, then when you click on the "Add to Cart" button, the quantity should increase by the amount indicated in the counter. Otherwise, it should only increment by 1.
 - added a state when the cart is empty
 - added disabled state of buttons
 
