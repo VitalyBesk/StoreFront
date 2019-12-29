@@ -37,4 +37,21 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Conclusions and Observations
+
+### What is missing:
+
+- links for the product category are formed by the title of the product. The idea makes sense, but in my opinion, space should be replaced with another character, for example, with “-”.
+- usually, the cart after updating the page should save the selected products and their quantity. You can use localStorage for this.
+- lazy loading of chunks when switching from one route to another.
+- should be 404 page. I just redirect to home page if a route does not match
+
+### What improved:
+
+- in my opinion, when the user is on the product page if in the counter the quantity of product is greater than the already added quantity, then when you click on the "Add to Cart" button, the quantity should increase by the amount indicated in the counter. Otherwise, it should only increment.
+- added a state when the cart is empty
+- added disabled state of buttons
+
+### Testing:
+
+- I chose BaseCounter as component for testing. It is reused in some parts of the application and in my opinion it is a suitable component for testing for testing. For testing used Jest and Enzyme. Just type `yarn test` or `npm run test` in CLI to run the test.

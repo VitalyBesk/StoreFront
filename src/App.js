@@ -77,7 +77,7 @@ function App() {
             )}
           />
           <Route path="/plates/:title" component={Product} />
-          <Redirect to="/" />
+          <Redirect from="*" to="/" />
         </Switch>
       )}
     </div>
