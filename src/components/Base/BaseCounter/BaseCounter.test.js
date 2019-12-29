@@ -9,11 +9,8 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("<BaseCounter/>", () => {
   let count = 0;
 
-  const increment = () => (count += 1);
-  const decrement = () => (count -= 1);
-
-  const mockFnIncrement = jest.fn(increment);
-  const mockFnDecrement = jest.fn(decrement);
+  const mockFnIncrement = jest.fn(() => (count += 1));
+  const mockFnDecrement = jest.fn(() => (count -= 1));
 
   const wrapper = mount(
     <BaseCounter
@@ -42,28 +39,23 @@ describe("<BaseCounter/>", () => {
   });
 
   it("it should increment count when button +(plus) clicked", () => {
-    expect(count).toBe(0);
     expect(wrapper.props().value).toBe(0);
     wrapper.props().handleClickIncrement();
     expect(mockFnIncrement).toHaveBeenCalled();
     wrapper.setProps({ value: count });
-    expect(count).toBe(1);
     expect(wrapper.props().value).toBe(1);
   });
 
   it("it should increment count when button -(minus) clicked", () => {
     count = 1;
-    expect(count).toBe(1);
     expect(wrapper.props().value).toBe(1);
     wrapper.props().handleClickDecrement();
     expect(mockFnDecrement).toHaveBeenCalled();
     wrapper.setProps({ value: count });
-    expect(count).toBe(0);
     expect(wrapper.props().value).toBe(0);
   });
 
   it("it should set button -(minus) disabled when value is equal 0", () => {
-    expect(count).toBe(0);
     expect(wrapper.props().value).toBe(0);
     expect(wrapper.find("button:last-child").prop("disabled")).toBeTruthy();
   });
